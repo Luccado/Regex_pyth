@@ -1,9 +1,11 @@
 import re
 
-stinrg = " oi sou o lucca lul";
+stinrg = "lucca";
 
 padrao = re.compile("lucca");
 
-x = re.search(padrao, stinrg); #verifica se a string atende o padrão definido
+x = re.fullmatch(padrao, stinrg);
+#x = re.search(padrao, stinrg); #verifica se a string atende o padrão definido a fullmath tem que corresponder exatamento com o padrão
+#x = re.findall(padrao, stinrg); mostra as vezes que aparece
 
 print(x);
